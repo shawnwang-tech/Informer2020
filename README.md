@@ -55,8 +55,18 @@ The required data files should be put into `data/ETT/` folder. A demo slice of t
 
 The ECL data and Weather data can be download here.
 - [Google Drive](https://drive.google.com/drive/folders/1ohGYWWohJlOlb2gsGTeEq3Wii2egnEPR?usp=sharing)
-- [BaiduPan](https://pan.baidu.com/s/1wyaGUisUICYHnfkZzWCwyA) : 6gan 
+- [BaiduPan](https://pan.baidu.com/s/1wyaGUisUICYHnfkZzWCwyA), password: 6gan 
 
+## Reproducibility
+
+To easily reproduce the results you can follow the next steps:
+1. Initialize the docker image using: `make init`.
+2. Download the datasets using: `make dataset`.
+3. Run each script in `scripts/` using `make run_module module="bash ETTh1.sh"` for each script.
+4. Alternatively, run all the scripts at once:
+```
+for file in `ls scripts`; do make run_module module="bash scripts/$script"; done
+```
 
 ## Usage
 <span id="colablink">Colab Examples:</span> We provide google colabs to help reproducing and customing our repo, which includes `experiments(train and test)`, `prediction`, `visualization` and `custom data`.
@@ -197,5 +207,5 @@ If you have any questions, feel free to contact Haoyi Zhou through Email (zhouha
 
 ## Acknowlegements
 Thanks for the computing infrastructure provided by Beijing Advanced Innovation Center for Big Data and Brain Computing ([BDBC](http://bdbc.buaa.edu.cn/)).
-At the same time, thank you all for your attention to this work!
+At the same time, thank you all for your attention to this work! [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhouhaoyi%2FInformer2020&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Hits+Count&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Stargazers repo roster for @zhouhaoyi/Informer2020](https://reporoster.com/stars/zhouhaoyi/Informer2020)](https://github.com/zhouhaoyi/Informer2020/stargazers)
